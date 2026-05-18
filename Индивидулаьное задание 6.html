@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Интерактивное резюме</title>
+
+<style>
+body {
+font-family: Arial;
+margin: 0;
+padding: 20px;
+background: #fafafa;
+}
+
+.container {
+max-width: 900px;
+margin: auto;
+background: white;
+padding: 25px;
+border-radius: 15px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+details {
+margin-top: 15px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 8px;
+}
+
+button {
+padding: 12px;
+margin-top: 15px;
+background: darkblue;
+color: white;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
+
+button:hover {
+background: green;
+}
+
+input, textarea {
+width: 100%;
+padding: 10px;
+margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Никита Артюхов</h1>
+<h2>Автоматизация технологических процессов и производств</h2>
+
+<details>
+<summary>Обо мне</summary>
+<p>Покладистый, трудолюбивый, если начал дело закончу его до конца.</p>
+</details>
+
+<details>
+<summary>Образование</summary>
+<p>Неполное высшее (бакалавриат)</p>
+</details>
+
+<details>
+<summary>Навыки</summary>
+<table border="1" width="100%">
+<tr>
+<th>Навык</th>
+<th>Уровень</th>
+</tr>
+<tr>
+<td>C++</td>
+<td>Хороший</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>Хороший</td>
+</tr>
+</table>
+</details>
+
+<button onclick="scrollDown()">Связаться со мной</button>
+
+<form id="contact">
+<input type="text" placeholder="Имя">
+<input type="email" placeholder="Email">
+<textarea placeholder="Сообщение"></textarea>
+</form>
+
+</div>
+
+<script>
+function scrollDown() {
+document.getElementById("contact").scrollIntoView({
+behavior: "smooth"
+});
+}
+</script>
+
+</body>
+</html>

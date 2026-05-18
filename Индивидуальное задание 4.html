@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Резюме</title>
+
+<style>
+body {
+font-family: Arial;
+background: #f3f3f3;
+padding: 20px;
+}
+
+.container {
+max-width: 800px;
+margin: auto;
+background: white;
+padding: 25px;
+border-radius: 15px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+color: darkblue;
+text-shadow: 2px 2px 4px gray;
+}
+
+button {
+padding: 10px;
+margin-top: 10px;
+background: blue;
+color: white;
+border: none;
+border-radius: 8px;
+}
+
+button:hover {
+background: green;
+}
+
+input {
+padding: 10px;
+width: 100%;
+margin-top: 10px;
+}
+</style>
+</head>
+
+<body id="body">
+<div class="container">
+
+<img src="https://via.placeholder.com/200" alt="Фото">
+
+<h1>Никита <span id="surname">Артюхов</span></h1>
+<h2>Автоматизация технологических процессов и производств</h2>
+
+<p>Покладистый, трудолюбивый, если начал дело закончу его до конца.</p>
+
+<h3>Образование</h3>
+<p>Неполное высшее (бакалавриат)</p>
+
+<h3>Навыки</h3>
+<ul>
+<li>C++</li>
+<li>C#</li>
+<li>Python</li>
+<li>T-Flex</li>
+<li>Компас</li>
+</ul>
+
+<input type="text" id="newSurname" placeholder="Введите новую фамилию">
+<button onclick="changeSurname()">Изменить фамилию</button>
+<button onclick="changeBg()">Сменить фон</button>
+
+</div>
+
+<script>
+function changeSurname() {
+let text = document.getElementById("newSurname").value;
+document.getElementById("surname").innerText = text;
+}
+
+function changeBg() {
+let color = "#" + Math.floor(Math.random()*16777215).toString(16);
+document.getElementById("body").style.background = color;
+}
+</script>
+
+</body>
+</html>
